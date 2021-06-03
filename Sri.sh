@@ -10,3 +10,8 @@ function getProperty {
 
 echo "# Reading property from $PROPERTY_FILE"
 REPOSITORY_URL=$(getProperty "nexus.repository.url")
+
+
+
+#Below worked for someone
+PROP_VALUE=cat $PROPERTY_FILE | grep "$PROP_KEY" | cut -d'=' -f2
